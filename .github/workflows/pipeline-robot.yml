@@ -15,6 +15,11 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Instalar Dependencias do projeto
+        run: |
+          pip install robortframework
+          pip install robortframework-requests
+          
       - name: Execução dos Testes de API    
         run: |
-          robot -d resources test
+          robot -d results test
