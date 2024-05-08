@@ -7,11 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: clonagem progeto
-        uses: actions/checkout@v2
+      - name: Clonagem projeto
+        uses: actions/checkout@v3
 
-      - nome: configuração do python
-        uses: actions/setup-puthon@2
+      - name: configuração do Python
+        uses: actions/setup-python@v2
         with:
           python-version: '3.12'
 
