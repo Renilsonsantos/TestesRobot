@@ -1,0 +1,17 @@
+name: testes back
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: clonagem progeto
+        uses: actions/checkout@v2
+
+      - nome: configuração do python
+        uses: actions/setup-puthon@2
+        with:
+          python-version: '3.12'
+
