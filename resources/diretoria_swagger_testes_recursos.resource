@@ -51,7 +51,7 @@ validar campo preenchido com caracteres não permitidos "O campo boardName só p
 
 deve permitir somente letras maiúsculas, minúsculas e o caractere especial & 
   ${headers}   Create Dictionary        authorization=${TOKEN}
-  ${body}   Create Dictionary    boardName=EtQi&
+  ${body}   Create Dictionary    boardName=EtQu&
   Log    ${body}
   Criar sessão
   ${resposta}  POST On Session    alias=APISwagger    url=/api/board/    json=${body}   expected_status=201
