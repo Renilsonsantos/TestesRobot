@@ -1,186 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-08T23:07:58.648489" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-08T23:11:22.864354" rpa="false" schemaversion="5">
 <suite id="s1" name="Post Swagger Test" source="c:\Users\renil\OneDrive\Área de Trabalho\Robot\TestesDeAPIRobotFramework\test\post_swagger_test.robot">
-<test id="s1-t1" name="Cenário com POST: Cadastrar um novo ususário com sucesso" line="8">
-<kw name="Criar um novo login de usuário" owner="swagger_testes_recursos">
-<kw name="Generate Random String" owner="String">
-<msg time="2024-05-08T23:07:58.930453" level="INFO">${palavra_randomica} = ZGtkBMua</msg>
-<var>${palavra_randomica}</var>
-<arg>length=8</arg>
-<arg>chars=[LETTERS]</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<status status="PASS" start="2024-05-08T23:07:58.929570" elapsed="0.042889"/>
-</kw>
-<kw name="Convert To Lower Case" owner="String">
-<msg time="2024-05-08T23:07:58.973250" level="INFO">${palavra_randomica} = zgtkbmua</msg>
-<var>${palavra_randomica}</var>
-<arg>${palavra_randomica}</arg>
-<doc>Converts string to lower case.</doc>
-<status status="PASS" start="2024-05-08T23:07:58.973250" elapsed="0.001009"/>
-</kw>
-<kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2024-05-08T23:07:59.021354" level="INFO">${EMAIL_TEST} = zgtkbmua@qacoders.com.br</msg>
-<arg>${EMAIL_TEST}</arg>
-<arg>${palavra_randomica}@qacoders.com.br</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2024-05-08T23:07:58.974259" elapsed="0.047665"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-05-08T23:07:59.023892" level="INFO">zgtkbmua@qacoders.com.br</msg>
-<arg>${EMAIL_TEST}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-05-08T23:07:59.021924" elapsed="0.001968"/>
-</kw>
-<status status="PASS" start="2024-05-08T23:07:58.927174" elapsed="0.096718"/>
-</kw>
-<kw name="Cadastrar novo usuário" owner="swagger_testes_recursos">
+<test id="s1-t1" name="Cenário com POST: Cadastrar diretoria" line="14">
+<kw name="incluir nova diretoria" owner="diretoria_swagger_testes_recursos">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-08T23:07:59.086666" level="INFO">${body} = {'fullName': 'Testa do Corty', 'mail': 'zgtkbmua@qacoders.com.br', 'password': '1234@Test', 'accessProfile': 'ADMIN', 'cpf': '88223243545', 'confirmPassword': '1234@Test'}</msg>
-<var>${body}</var>
-<arg>fullName=Testa do Corty</arg>
-<arg>mail=${EMAIL_TEST}</arg>
-<arg>password=1234@Test</arg>
-<arg>accessProfile=ADMIN</arg>
-<arg>cpf=88223243545</arg>
-<arg>confirmPassword=1234@Test</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-08T23:07:59.086666" elapsed="0.000000"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-05-08T23:07:59.086666" level="INFO">{'fullName': 'Testa do Corty', 'mail': 'zgtkbmua@qacoders.com.br', 'password': '1234@Test', 'accessProfile': 'ADMIN', 'cpf': '88223243545', 'confirmPassword': '1234@Test'}</msg>
-<arg>${body}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-05-08T23:07:59.086666" elapsed="0.000000"/>
-</kw>
-<kw name="Criar sessão" owner="swagger_testes_recursos">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-08T23:07:59.089938" level="INFO">${headers} = {'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMGZlZWU3NjA2NGY0NTlkNWYxMGQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWV...</msg>
+<msg time="2024-05-08T23:11:23.113712" level="INFO">${headers} = {'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMGZlZWU3NjA2NGY0NTlkNWYxMGQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6...</msg>
 <var>${headers}</var>
-<arg>accept=application/json</arg>
-<arg>Content-Type=application/json</arg>
 <arg>authorization=${TOKEN}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-08T23:07:59.086666" elapsed="0.003272"/>
+<status status="PASS" start="2024-05-08T23:11:23.113712" elapsed="0.006896"/>
 </kw>
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-05-08T23:07:59.090949" level="INFO">Creating Session using : alias=APISwagger, url=https://qualitys-hunters.qacoders-academy.com.br, headers={'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMGZlZWU3NjA2NGY0NTlkNWYxMGQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRhTXo4NTRBRmpETWtwUWZ6a040alh1Q05rQWpWSEsvRlR5Lll0WmF3M2pHcHpzL1RnbUtpSyIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjQwOjMwIEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzBmZWVlNzYwNjRmNDU5ZDVmMTBlIn1dLCJfX3YiOjAsImlhdCI6MTcxNTIxNDA4NiwiZXhwIjoxNzE1MzAwNDg2fQ.yWuSfSlkR6zhFPdZ8Dd_xftIMcwFXaYvdtlYVxEewOk'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<arg>alias=APISwagger</arg>
-<arg>url=https://qualitys-hunters.qacoders-academy.com.br</arg>
-<arg>headers=${headers}</arg>
-<arg>verify=true</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-05-08T23:07:59.090949" elapsed="0.000999"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-08T23:11:23.121725" level="FAIL">Variable '${BOARD_NAME}' not found.</msg>
+<var>${body}</var>
+<arg>boardName=${BOARD_NAME}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="FAIL" start="2024-05-08T23:11:23.120716" elapsed="0.003008">Variable '${BOARD_NAME}' not found.</status>
 </kw>
-<status status="PASS" start="2024-05-08T23:07:59.086666" elapsed="0.010280"/>
+<kw name="Log" owner="BuiltIn">
+<arg>${body}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-05-08T23:11:23.123724" elapsed="0.001308"/>
+</kw>
+<kw name="Criar sessão" owner="diretoria_swagger_testes_recursos">
+<status status="NOT RUN" start="2024-05-08T23:11:23.125032" elapsed="0.000000"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2024-05-08T23:08:01.016705" level="INFO">POST Request : url=https://qualitys-hunters.qacoders-academy.com.br/api/user 
- path_url=/api/user 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMGZlZWU3NjA2NGY0NTlkNWYxMGQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRhTXo4NTRBRmpETWtwUWZ6a040alh1Q05rQWpWSEsvRlR5Lll0WmF3M2pHcHpzL1RnbUtpSyIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjQwOjMwIEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzBmZWVlNzYwNjRmNDU5ZDVmMTBlIn1dLCJfX3YiOjAsImlhdCI6MTcxNTIxNDA4NiwiZXhwIjoxNzE1MzAwNDg2fQ.yWuSfSlkR6zhFPdZ8Dd_xftIMcwFXaYvdtlYVxEewOk', 'Content-Length': '171'} 
- body=b'{"fullName": "Testa do Corty", "mail": "zgtkbmua@qacoders.com.br", "password": "1234@Test", "accessProfile": "ADMIN", "cpf": "88223243545", "confirmPassword": "1234@Test"}' 
- </msg>
-<msg time="2024-05-08T23:08:01.016705" level="INFO">POST Response : url=https://qualitys-hunters.qacoders-academy.com.br/api/user 
- status=201, reason=Created 
- headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Thu, 09 May 2024 02:08:15 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '463', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': 'W/"1cf-xAd/KnVlIvmHTtGzPnUOO4SMFpM"'} 
- body={"msg":"Olá Testa do Corty, cadastro realizado com sucesso.","user":{"_id":"663c300fac37ede4bdf753b5","fullName":"Testa do Corty","mail":"zgtkbmua@qacoders.com.br","accessProfile":"ADMIN","cpf":"88223243545","status":true,"audit":[{"registeredBy":{"userId":"65330feee76064f459d5f10d","userLogin":"sysadmin@qacoders.com"},"registrationDate":"quarta-feira, 08/05/2024, 23:08:15 BRT","registrationNumber":"QaCoders-2583","_id":"663c300fac37ede4bdf753b6"}],"__v":0}} 
- </msg>
-<msg time="2024-05-08T23:08:01.016705" level="INFO">${resposta} = &lt;Response [201]&gt;</msg>
 <var>${resposta}</var>
 <arg>alias=APISwagger</arg>
-<arg>url=/api/user</arg>
+<arg>url=/api/board/</arg>
 <arg>json=${body}</arg>
-<arg>expected_status=201</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-05-08T23:07:59.097065" elapsed="1.919640"/>
+<status status="NOT RUN" start="2024-05-08T23:11:23.125032" elapsed="0.000728"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${resposta.json()}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-05-08T23:08:01.023248" elapsed="0.004162"/>
-</kw>
-<kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2024-05-08T23:08:01.029990" level="INFO">${ID_USUARIO} = 663c300fac37ede4bdf753b5</msg>
-<arg>${ID_USUARIO}</arg>
-<arg>${resposta.json()["user"]["_id"]}</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2024-05-08T23:08:01.029990" elapsed="0.000000"/>
-</kw>
-<kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2024-05-08T23:08:01.029990" level="INFO">${RESPOSTA} = {'msg': 'Olá Testa do Corty, cadastro realizado com sucesso.', 'user': {'_id': '663c300fac37ede4bdf753b5', 'fullName': 'Testa do Corty', 'mail': 'zgtkbmua@qacoders.com.br', 'accessProfile': 'ADMIN', '...</msg>
-<arg>${RESPOSTA}</arg>
-<arg>${resposta.json()}</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2024-05-08T23:08:01.029990" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-05-08T23:07:59.078305" elapsed="1.951685"/>
-</kw>
-<kw name="Consultar os dados do usuário" owner="swagger_testes_recursos">
-<kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2024-05-08T23:08:01.060310" level="INFO">GET Request : url=https://qualitys-hunters.qacoders-academy.com.br/api/user/663c300fac37ede4bdf753b5 
- path_url=/api/user/663c300fac37ede4bdf753b5 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMGZlZWU3NjA2NGY0NTlkNWYxMGQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRhTXo4NTRBRmpETWtwUWZ6a040alh1Q05rQWpWSEsvRlR5Lll0WmF3M2pHcHpzL1RnbUtpSyIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjQwOjMwIEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzBmZWVlNzYwNjRmNDU5ZDVmMTBlIn1dLCJfX3YiOjAsImlhdCI6MTcxNTIxNDA4NiwiZXhwIjoxNzE1MzAwNDg2fQ.yWuSfSlkR6zhFPdZ8Dd_xftIMcwFXaYvdtlYVxEewOk'} 
- body=None 
- </msg>
-<msg time="2024-05-08T23:08:01.060310" level="INFO">GET Response : url=https://qualitys-hunters.qacoders-academy.com.br/api/user/663c300fac37ede4bdf753b5 
- status=200, reason=OK 
- headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Thu, 09 May 2024 02:08:15 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': 'W/"1d3-e1Qlp+A+msl5KyQvw04WOzG92p4"', 'Content-Encoding': 'gzip'} 
- body={"_id":"663c300fac37ede4bdf753b5","fullName":"Testa do Corty","mail":"zgtkbmua@qacoders.com.br","password":"$2b$10$ukeVzrVFN38RxR7ruLFKIejGm2dG3e4eGwoYKryYBdGkYw8uz0Uju","accessProfile":"ADMIN","cpf":"88223243545","status":true,"audit":[{"registeredBy":{"userId":"65330feee76064f459d5f10d","userLogin":"sysadmin@qacoders.com"},"registrationDate":"quarta-feira, 08/05/2024, 23:08:15 BRT","registrationNumber":"QaCoders-2583","_id":"663c300fac37ede4bdf753b6"}],"__v":0} 
- </msg>
-<msg time="2024-05-08T23:08:01.060310" level="INFO">${resposta_consultar} = &lt;Response [200]&gt;</msg>
-<var>${resposta_consultar}</var>
-<arg>alias=APISwagger</arg>
-<arg>url=/api/user/${ID_USUARIO}</arg>
-<arg>expected_status=200</arg>
-<doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-05-08T23:08:01.034719" elapsed="0.025591"/>
-</kw>
-<kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2024-05-08T23:08:01.061314" level="INFO">${RESPOSTA_CONSULTAR} = {'_id': '663c300fac37ede4bdf753b5', 'fullName': 'Testa do Corty', 'mail': 'zgtkbmua@qacoders.com.br', 'password': '$2b$10$ukeVzrVFN38RxR7ruLFKIejGm2dG3e4eGwoYKryYBdGkYw8uz0Uju', 'accessProfile': 'ADMI...</msg>
-<arg>${RESPOSTA_CONSULTAR}</arg>
-<arg>${resposta_consultar.json()}</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2024-05-08T23:08:01.061314" elapsed="0.001000"/>
-</kw>
-<status status="PASS" start="2024-05-08T23:08:01.029990" elapsed="0.032324"/>
-</kw>
-<kw name="Conferir se este novo ususário foi cadastrado corretamente" owner="swagger_testes_recursos">
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-05-08T23:08:01.068741" level="INFO">{'msg': 'Olá Testa do Corty, cadastro realizado com sucesso.', 'user': {'_id': '663c300fac37ede4bdf753b5', 'fullName': 'Testa do Corty', 'mail': 'zgtkbmua@qacoders.com.br', 'accessProfile': 'ADMIN', 'cpf': '88223243545', 'status': True, 'audit': [{'registeredBy': {'userId': '65330feee76064f459d5f10d', 'userLogin': 'sysadmin@qacoders.com'}, 'registrationDate': 'quarta-feira, 08/05/2024, 23:08:15 BRT', 'registrationNumber': 'QaCoders-2583', '_id': '663c300fac37ede4bdf753b6'}], '__v': 0}}</msg>
-<arg>${RESPOSTA}</arg>
+<arg>${resposta.json()}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-05-08T23:08:01.068741" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-05-08T23:11:23.146021" elapsed="0.000000"/>
 </kw>
-<kw name="Dictionary Should Contain Item" owner="Collections">
-<msg time="2024-05-08T23:08:01.069742" level="INFO">False
-False</msg>
+<kw name="Set Test Variable" owner="BuiltIn">
+<arg>${BOARD_NAME}</arg>
+<arg>${resposta.json()['newBoard']['_id']}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" start="2024-05-08T23:11:23.146021" elapsed="0.000000"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
 <arg>${RESPOSTA}</arg>
-<arg>msg</arg>
-<arg>Olá Testa do Corty, cadastro realizado com sucesso.</arg>
-<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
-<status status="PASS" start="2024-05-08T23:08:01.068741" elapsed="0.001001"/>
+<arg>${resposta.json()}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" start="2024-05-08T23:11:23.146021" elapsed="0.000000"/>
 </kw>
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<msg time="2024-05-08T23:08:01.070490" level="INFO">False</msg>
-<arg>${RESPOSTA}</arg>
-<arg>user</arg>
-<arg>_id</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2024-05-08T23:08:01.069742" elapsed="0.000748"/>
+<status status="FAIL" start="2024-05-08T23:11:23.112241" elapsed="0.033780">Variable '${BOARD_NAME}' not found.</status>
 </kw>
-<status status="PASS" start="2024-05-08T23:08:01.067742" elapsed="0.002748"/>
+<kw name="deve permitir somente letras maiúsculas, minúsculas e o caractere especial &amp;" owner="diretoria_swagger_testes_recursos">
+<status status="NOT RUN" start="2024-05-08T23:11:23.146021" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-05-08T23:07:58.921869" elapsed="2.172283"/>
+<status status="FAIL" start="2024-05-08T23:11:23.110385" elapsed="0.041276">Variable '${BOARD_NAME}' not found.</status>
 </test>
-<status status="PASS" start="2024-05-08T23:07:58.658889" elapsed="2.721108"/>
+<status status="FAIL" start="2024-05-08T23:11:22.878122" elapsed="0.275047"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Post Swagger Test">Post Swagger Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Post Swagger Test">Post Swagger Test</stat>
 </suite>
 </statistics>
 <errors>

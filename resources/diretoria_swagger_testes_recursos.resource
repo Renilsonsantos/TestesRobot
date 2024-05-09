@@ -51,11 +51,11 @@ validar campo preenchido com caracteres não permitidos "O campo boardName só p
 
 deve permitir somente letras maiúsculas, minúsculas e o caractere especial & 
   ${headers}   Create Dictionary        authorization=${TOKEN}
-  ${body}   Create Dictionary    boardName=EaQi&
+  ${body}   Create Dictionary    boardName=EtQi&
   Log    ${body}
   Criar sessão
   ${resposta}  POST On Session    alias=APISwagger    url=/api/board/    json=${body}   expected_status=201
   Log    ${resposta.json()}
   Set Test Variable    ${BOARD_NAME}    ${resposta.json()['newBoard']['_id']}  
-  Set Test Variable    ${RESPOSTA}    ${resposta.json()}
+  Set Test Variable    ${RESPOSTA}      ${resposta.json()}
 
