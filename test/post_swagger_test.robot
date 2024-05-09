@@ -11,7 +11,9 @@ Cenário com POST: Cadastrar um novo ususário com sucesso
     Consultar os dados do usuário
     Conferir se este novo ususário foi cadastrado corretamente
 
-Cenário com POST: Cadastrar diretoria   # validar campo obrigatório vazio a mensagem O campo boardName é obrigatório
+Cenário com POST: Cadastrar diretoria 
+    incluir nova diretoria  
+   # validar campo obrigatório vazio a mensagem O campo boardName é obrigatório
    #validar campo preenchido com caracteres não permitidos "O campo boardName só pode conter (descrição_caracteres)
     deve permitir somente letras maiúsculas, minúsculas e o caractere especial & 
     

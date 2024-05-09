@@ -6,8 +6,7 @@ Library  Collections
 
 *** Variables ***
 
-${TOKEN}   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNTA0MTQ2NiwiZXhwIjoxNzE1MTI3ODY2fQ.-IjitM51kx2LkafPmGSL7761Mxho_oGVpza9cSQiTiw
-
+${TOKEN}   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMGZlZWU3NjA2NGY0NTlkNWYxMGQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRhTXo4NTRBRmpETWtwUWZ6a040alh1Q05rQWpWSEsvRlR5Lll0WmF3M2pHcHpzL1RnbUtpSyIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjQwOjMwIEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzBmZWVlNzYwNjRmNDU5ZDVmMTBlIn1dLCJfX3YiOjAsImlhdCI6MTcxNTIxNDA4NiwiZXhwIjoxNzE1MzAwNDg2fQ.yWuSfSlkR6zhFPdZ8Dd_xftIMcwFXaYvdtlYVxEewOk
 *** Keywords ***
 Criar sessão
   ${headers}   Create Dictionary   accept=application/json   Content-Type=application/json    authorization=${TOKEN}
@@ -16,7 +15,7 @@ Criar sessão
 Massa de dados diretoria
   ${palavra_randomica_diretoria}   Generate Random String   length=8   chars=[LETTERS]
   ${palavra_randomica_diretoria}   Convert To Lower Case   ${palavra_randomica_diretoria} 
-  set test Variable    ${BOARD_NAME}          ${palavra_randomica_diretoria}
+  set test Variable    ${BOARD_NAME}                      ${palavra_randomica_diretoria}
   Log                  ${BOARD_NAME}
 
 incluir nova diretoria 
@@ -52,7 +51,7 @@ validar campo preenchido com caracteres não permitidos "O campo boardName só p
 
 deve permitir somente letras maiúsculas, minúsculas e o caractere especial & 
   ${headers}   Create Dictionary        authorization=${TOKEN}
-  ${body}   Create Dictionary    boardName=EiQe&
+  ${body}   Create Dictionary    boardName=EaQi&
   Log    ${body}
   Criar sessão
   ${resposta}  POST On Session    alias=APISwagger    url=/api/board/    json=${body}   expected_status=201
