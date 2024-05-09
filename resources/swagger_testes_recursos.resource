@@ -20,7 +20,7 @@ Criar um novo login de usuário
   Log                  ${EMAIL_TEST}
 
 Cadastrar novo usuário 
-  ${body}  Create Dictionary    fullName=Testa do Cort    mail=${EMAIL_TEST}    password=1234@Test    accessProfile=ADMIN  cpf=88223243541    confirmPassword=1234@Test  
+  ${body}  Create Dictionary    fullName=Testa do Corty    mail=${EMAIL_TEST}    password=1234@Test    accessProfile=ADMIN  cpf=88223243545    confirmPassword=1234@Test  
   Log    ${body}
   Criar sessão
       ${resposta}    POST On Session    alias=APISwagger    url=/api/user    json=${body}  expected_status=201   
@@ -34,7 +34,7 @@ Consultar os dados do usuário
 
 Conferir se este novo ususário foi cadastrado corretamente
   Log    ${RESPOSTA}
-  Dictionary Should Contain Item    ${RESPOSTA}    msg    Olá Testa do Cort, cadastro realizado com sucesso.   
+  Dictionary Should Contain Item    ${RESPOSTA}    msg    Olá Testa do Corty, cadastro realizado com sucesso.   
   Dictionary Should Contain Key    ${RESPOSTA}   user    _id
 
     
