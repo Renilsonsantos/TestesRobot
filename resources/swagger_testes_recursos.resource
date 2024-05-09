@@ -20,7 +20,7 @@ Criar um novo login de usuário
   Log                  ${EMAIL_TEST}
 
 Cadastrar novo usuário 
-  ${body}  Create Dictionary    fullName=Testa do Cort    mail=${EMAIL_TEST}    password=1234@Test    accessProfile=ADMIN  cpf=88223243542    confirmPassword=1234@Test  
+  ${body}  Create Dictionary    fullName=Testa do Cort    mail=${EMAIL_TEST}    password=1234@Test    accessProfile=ADMIN  cpf=88223243541    confirmPassword=1234@Test  
   Log    ${body}
   Criar sessão
       ${resposta}    POST On Session    alias=APISwagger    url=/api/user    json=${body}  expected_status=201   
