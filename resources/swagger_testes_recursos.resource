@@ -8,7 +8,7 @@ Library  Collections
 
 *** Variables ***
 
-${TOKEN}   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNTY0NTY1NywiZXhwIjoxNzE1NzMyMDU3fQ.PIRLfoeBucJxV0kbWfUvcD2tUqPjafcWW6K9QvOyVKU
+${TOKEN}   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjE1OTU1NSwiZXhwIjoxNzE2MjQ1OTU1fQ.Lhc9wgBb8tzYQcGL_Kd2KGm6l6DbOVutIVZLhiaK-_c
 
 *** Keywords ***    
 Criar sessão
@@ -30,13 +30,20 @@ Criar um novo login de usuário
 
 Cadastrar novo usuário 
   ${body}  Create Dictionary    fullName=${FULLNAME}   mail=${EMAIL_TEST}    password=1234@Test    accessProfile=ADMIN    cpf=${CPF}    confirmPassword=1234@Test  
-  Log    ${body}
+  Log    ${body}  
+
   Criar sessão 
   ${resposta}      POST On Session      alias=APISwagger    url=/api/user    json=${body}    
   Log    ${resposta.json()}
   Set Suite Variable    ${ID_USUARIO}     ${resposta.json()["user"]["_id"]}
   Set Test Variable     ${RESPOSTA}       ${resposta.json()}
-
+Pegar token
+  ${body}  Create Dictionary      mail=${EMAIL_TEST}     password=1234@Test      
+  Log    ${body}
+  Criar sessão 
+  ${resposta}      POST On Session      alias=APISwagger    url=/api/user    json=${body}    expected_status=400
+  Log    ${resposta.json()}
+    RETURN          ${resposta.json()["token"]}  
 Consultar os dados do usuário
   ${resposta_consultar}    GET On Session    alias=APISwagger    url=/api/user/${ID_USUARIO}      expected_status=200
   Set Test Variable    ${RESPOSTA_CONSULTAR}                        ${resposta_consultar.json()}
