@@ -12,7 +12,26 @@ ${TOKEN}   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMw
 Criar sessão
   ${headers}   Create Dictionary   accept=application/json   Content-Type=application/json    authorization=${TOKEN}
   Create Session   alias=APISwagger   url=https://qualitys-hunters.qacoders-academy.com.br   headers=${headers}
-    
+
+
+Abrir com usuario sysadmin
+    ${body}    Create Dictionary    mail=sysadmin@qacoders.com    password=1234@Test
+    Log    ${body}
+    Criar sessão
+    ${resposta}    POST On Session    alias=APISwagger    url=/api/login    json=${body}
+    Log    ${resposta.json()}
+    Set Test Variable    ${TOKEN}    ${resposta.json()["token"]}
+ 
+    RETURN    ${TOKEN}
+
+Salvar o token e gravar no header de autorização
+  ${tokenadm}    Abrir com usuario sysadmin    
+  ${headers}    Create Dictionary    Authorization=Bearer ${TOKEN}
+  ${resposta}    GET On Session    alias=APISwagger    url=/api/validateToken    headers=${headers}
+  Log    Resposta da solicitação: ${resposta.content}
+  Log    ${TOKEN}
+
+
 Massa de dados diretoria
   ${palavra_randomica_diretoria}   Generate Random String   length=8   chars=[LETTERS]
   ${palavra_randomica_diretoria}   Convert To Lower Case   ${palavra_randomica_diretoria} 

@@ -1,367 +1,582 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-19T20:29:32.029562" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-20T21:54:26.901208" rpa="false" schemaversion="5">
 <suite id="s1" name="Post Swagger Test" source="c:\Users\renil\OneDrive\Área de Trabalho\Robot\TestesDeAPIRobotFramework\test\post_swagger_test.robot">
-<test id="s1-t1" name="Cenário com POST: Cadastrar diretoria" line="14">
-<kw name="Massa de dados diretoria" owner="diretoria_swagger_testes_recursos">
-<kw name="Generate Random String" owner="String">
-<msg time="2024-05-19T20:29:32.194757" level="INFO">${palavra_randomica_diretoria} = TFWosCUj</msg>
-<var>${palavra_randomica_diretoria}</var>
-<arg>length=8</arg>
-<arg>chars=[LETTERS]</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.194757" elapsed="0.007531"/>
-</kw>
-<kw name="Convert To Lower Case" owner="String">
-<msg time="2024-05-19T20:29:32.202288" level="INFO">${palavra_randomica_diretoria} = tfwoscuj</msg>
-<var>${palavra_randomica_diretoria}</var>
-<arg>${palavra_randomica_diretoria}</arg>
-<doc>Converts string to lower case.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.202288" elapsed="0.000000"/>
-</kw>
-<kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.202288" level="INFO">${BOARD_NAME} = tfwoscuj</msg>
-<arg>${BOARD_NAME}</arg>
-<arg>${palavra_randomica_diretoria}</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.202288" elapsed="0.053419"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.255707" level="INFO">tfwoscuj</msg>
-<arg>${BOARD_NAME}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.255707" elapsed="0.000000"/>
-</kw>
-<kw name="Generate Random String" owner="String">
-<msg time="2024-05-19T20:29:32.255707" level="INFO">${palavra_randomica} = BSolGqhq</msg>
-<var>${palavra_randomica}</var>
-<arg>length=8</arg>
-<arg>chars=[LETTERS]</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.255707" elapsed="0.000000"/>
-</kw>
-<kw name="Convert To Lower Case" owner="String">
-<msg time="2024-05-19T20:29:32.255707" level="INFO">${palavra_randomica} = bsolgqhq</msg>
-<var>${palavra_randomica}</var>
-<arg>${palavra_randomica}</arg>
-<doc>Converts string to lower case.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.255707" elapsed="0.000000"/>
-</kw>
-<kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.255707" level="INFO">${BOARD} = bsolgqhq&amp;</msg>
-<arg>${BOARD}</arg>
-<arg>${palavra_randomica}&amp;</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.255707" elapsed="0.000000"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.255707" level="INFO">bsolgqhq&amp;</msg>
-<arg>${BOARD}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.255707" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-05-19T20:29:32.194757" elapsed="0.060950"/>
-</kw>
-<kw name="incluir nova diretoria" owner="diretoria_swagger_testes_recursos">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.255707" level="INFO">${headers} = {'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6...</msg>
-<var>${headers}</var>
-<arg>authorization=${TOKEN}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.255707" elapsed="0.000000"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.255707" level="INFO">${body} = {'boardName': 'tfwoscuj'}</msg>
-<var>${body}</var>
-<arg>boardName=${BOARD_NAME}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.255707" elapsed="0.000000"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.255707" level="INFO">{'boardName': 'tfwoscuj'}</msg>
-<arg>${body}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.255707" elapsed="0.000000"/>
-</kw>
+<test id="s1-t1" name="Cenário com POST: Cadastrar diretoria" line="17">
 <kw name="Criar sessão" owner="diretoria_swagger_testes_recursos">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.271224" level="INFO">${headers} = {'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWV...</msg>
+<msg time="2024-05-20T21:54:27.271594" level="INFO">${headers} = {'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWV...</msg>
 <var>${headers}</var>
 <arg>accept=application/json</arg>
 <arg>Content-Type=application/json</arg>
 <arg>authorization=${TOKEN}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.255707" elapsed="0.015517"/>
+<status status="PASS" start="2024-05-20T21:54:27.270593" elapsed="0.031482"/>
 </kw>
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-05-19T20:29:32.272395" level="INFO">Creating Session using : alias=APISwagger, url=https://qualitys-hunters.qacoders-academy.com.br, headers={'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjE1OTU1NSwiZXhwIjoxNzE2MjQ1OTU1fQ.Lhc9wgBb8tzYQcGL_Kd2KGm6l6DbOVutIVZLhiaK-_c'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-05-20T21:54:27.303581" level="INFO">Creating Session using : alias=APISwagger, url=https://qualitys-hunters.qacoders-academy.com.br, headers={'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjE1OTU1NSwiZXhwIjoxNzE2MjQ1OTU1fQ.Lhc9wgBb8tzYQcGL_Kd2KGm6l6DbOVutIVZLhiaK-_c'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>alias=APISwagger</arg>
 <arg>url=https://qualitys-hunters.qacoders-academy.com.br</arg>
 <arg>headers=${headers}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-05-19T20:29:32.272395" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:27.303077" elapsed="0.000504"/>
 </kw>
-<status status="PASS" start="2024-05-19T20:29:32.255707" elapsed="0.016688"/>
+<status status="PASS" start="2024-05-20T21:54:27.266077" elapsed="0.037504"/>
+</kw>
+<kw name="Abrir com usuario sysadmin" owner="diretoria_swagger_testes_recursos">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-20T21:54:27.307601" level="INFO">${body} = {'mail': 'sysadmin@qacoders.com', 'password': '1234@Test'}</msg>
+<var>${body}</var>
+<arg>mail=sysadmin@qacoders.com</arg>
+<arg>password=1234@Test</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-20T21:54:27.305594" elapsed="0.005995"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-20T21:54:27.311589" level="INFO">{'mail': 'sysadmin@qacoders.com', 'password': '1234@Test'}</msg>
+<arg>${body}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-20T21:54:27.311589" elapsed="0.000000"/>
+</kw>
+<kw name="Criar sessão" owner="diretoria_swagger_testes_recursos">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-20T21:54:27.314098" level="INFO">${headers} = {'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWV...</msg>
+<var>${headers}</var>
+<arg>accept=application/json</arg>
+<arg>Content-Type=application/json</arg>
+<arg>authorization=${TOKEN}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-20T21:54:27.313592" elapsed="0.000506"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-05-20T21:54:27.314098" level="INFO">Creating Session using : alias=APISwagger, url=https://qualitys-hunters.qacoders-academy.com.br, headers={'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjE1OTU1NSwiZXhwIjoxNzE2MjQ1OTU1fQ.Lhc9wgBb8tzYQcGL_Kd2KGm6l6DbOVutIVZLhiaK-_c'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>alias=APISwagger</arg>
+<arg>url=https://qualitys-hunters.qacoders-academy.com.br</arg>
+<arg>headers=${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-05-20T21:54:27.314098" elapsed="0.001009"/>
+</kw>
+<status status="PASS" start="2024-05-20T21:54:27.312592" elapsed="0.002515"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2024-05-19T20:29:32.538552" level="INFO">POST Request : url=https://qualitys-hunters.qacoders-academy.com.br/api/board/ 
- path_url=/api/board/ 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjE1OTU1NSwiZXhwIjoxNzE2MjQ1OTU1fQ.Lhc9wgBb8tzYQcGL_Kd2KGm6l6DbOVutIVZLhiaK-_c', 'Content-Length': '25'} 
- body=b'{"boardName": "tfwoscuj"}' 
+<msg time="2024-05-20T21:54:27.890337" level="INFO">POST Request : url=https://qualitys-hunters.qacoders-academy.com.br/api/login 
+ path_url=/api/login 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjE1OTU1NSwiZXhwIjoxNzE2MjQ1OTU1fQ.Lhc9wgBb8tzYQcGL_Kd2KGm6l6DbOVutIVZLhiaK-_c', 'Content-Length': '58'} 
+ body=b'{"mail": "sysadmin@qacoders.com", "password": "1234@Test"}' 
  </msg>
-<msg time="2024-05-19T20:29:32.539569" level="INFO">POST Response : url=https://qualitys-hunters.qacoders-academy.com.br/api/board/ 
- status=201, reason=Created 
- headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 23:29:28 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '339', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': 'W/"153-ytUtoXqALDS7wTY+IDzyXwlw6jY"'} 
- body={"msg":"Cadastro realizado com sucesso!","newBoard":{"boardName":"tfwoscuj","boardCode":"302","status":true,"audit":[{"registrationDate":"domingo, 19/05/2024, 20:29:28 BRT","registeredBy":{"userId":"6533099afa70d53075c81ef4","userLogin":"sysadmin@qacoders.com"},"_id":"664a8b58b91aa60a4623815e"}],"_id":"664a8b58b91aa60a4623815d","__v":0}} 
+<msg time="2024-05-20T21:54:27.892339" level="INFO">POST Response : url=https://qualitys-hunters.qacoders-academy.com.br/api/login 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Tue, 21 May 2024 00:54:24 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': 'W/"534-3NDOOzi5LyKG8BvqFnFla+vvddk"', 'Content-Encoding': 'gzip'} 
+ body={"msg":"Olá Qa-Coders-SYSADMIN, autenticação autorizada com sucesso!","user":{"_id":"6533099afa70d53075c81ef4","fullName":"Qa-Coders-SYSADMIN","mail":"sysadmin@qacoders.com","password":"$2b$10$ATGtQ.Y1PxkUq4rCKM3Kluv9xMRHPu82H8bZ7dSEISqLuPJR.LAn6","accessProfile":"SYSADMIN","cpf":"11111111111","status":true,"audit":[{"registeredBy":{"userId":"111111111111111111","userLogin":"sysadmin@qacoders.com"},"registrationDate":"sexta-feira, 20/10/2023, 20:13:29 BRT","registrationNumber":"01","companyId":"Qa.Coders","_id":"6533099afa70d53075c81ef5"}],"__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE"} 
  </msg>
-<msg time="2024-05-19T20:29:32.539569" level="INFO">C:\Users\renil\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qualitys-hunters.qacoders-academy.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2024-05-20T21:54:27.892339" level="INFO">C:\Users\renil\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qualitys-hunters.qacoders-academy.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2024-05-19T20:29:32.542832" level="INFO">${resposta} = &lt;Response [201]&gt;</msg>
+<msg time="2024-05-20T21:54:27.896286" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<var>${resposta}</var>
+<arg>alias=APISwagger</arg>
+<arg>url=/api/login</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-05-20T21:54:27.316115" elapsed="0.580171"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-20T21:54:27.898288" level="INFO">{'msg': 'Olá Qa-Coders-SYSADMIN, autenticação autorizada com sucesso!', 'user': {'_id': '6533099afa70d53075c81ef4', 'fullName': 'Qa-Coders-SYSADMIN', 'mail': 'sysadmin@qacoders.com', 'password': '$2b$10$ATGtQ.Y1PxkUq4rCKM3Kluv9xMRHPu82H8bZ7dSEISqLuPJR.LAn6', 'accessProfile': 'SYSADMIN', 'cpf': '11111111111', 'status': True, 'audit': [{'registeredBy': {'userId': '111111111111111111', 'userLogin': 'sysadmin@qacoders.com'}, 'registrationDate': 'sexta-feira, 20/10/2023, 20:13:29 BRT', 'registrationNumber': '01', 'companyId': 'Qa.Coders', '_id': '6533099afa70d53075c81ef5'}], '__v': 0}, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE'}</msg>
+<arg>${resposta.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-20T21:54:27.897287" elapsed="0.001001"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-05-20T21:54:27.899288" level="INFO">${TOKEN} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5...</msg>
+<arg>${TOKEN}</arg>
+<arg>${resposta.json()["token"]}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-05-20T21:54:27.898288" elapsed="0.001000"/>
+</kw>
+<return>
+<value>${TOKEN}</value>
+<status status="PASS" start="2024-05-20T21:54:27.899288" elapsed="0.001149"/>
+</return>
+<status status="PASS" start="2024-05-20T21:54:27.304592" elapsed="0.595845"/>
+</kw>
+<kw name="Salvar o token e gravar no header de autorização" owner="diretoria_swagger_testes_recursos">
+<kw name="Abrir com usuario sysadmin" owner="diretoria_swagger_testes_recursos">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-20T21:54:27.902447" level="INFO">${body} = {'mail': 'sysadmin@qacoders.com', 'password': '1234@Test'}</msg>
+<var>${body}</var>
+<arg>mail=sysadmin@qacoders.com</arg>
+<arg>password=1234@Test</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-20T21:54:27.901446" elapsed="0.001001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-20T21:54:27.902447" level="INFO">{'mail': 'sysadmin@qacoders.com', 'password': '1234@Test'}</msg>
+<arg>${body}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-20T21:54:27.902447" elapsed="0.000000"/>
+</kw>
+<kw name="Criar sessão" owner="diretoria_swagger_testes_recursos">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-20T21:54:27.903958" level="INFO">${headers} = {'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWV...</msg>
+<var>${headers}</var>
+<arg>accept=application/json</arg>
+<arg>Content-Type=application/json</arg>
+<arg>authorization=${TOKEN}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-20T21:54:27.903958" elapsed="0.000000"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-05-20T21:54:27.904966" level="INFO">Creating Session using : alias=APISwagger, url=https://qualitys-hunters.qacoders-academy.com.br, headers={'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>alias=APISwagger</arg>
+<arg>url=https://qualitys-hunters.qacoders-academy.com.br</arg>
+<arg>headers=${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-05-20T21:54:27.903958" elapsed="0.001008"/>
+</kw>
+<status status="PASS" start="2024-05-20T21:54:27.903447" elapsed="0.001519"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2024-05-20T21:54:28.228723" level="INFO">POST Request : url=https://qualitys-hunters.qacoders-academy.com.br/api/login 
+ path_url=/api/login 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE', 'Content-Length': '58'} 
+ body=b'{"mail": "sysadmin@qacoders.com", "password": "1234@Test"}' 
+ </msg>
+<msg time="2024-05-20T21:54:28.228723" level="INFO">POST Response : url=https://qualitys-hunters.qacoders-academy.com.br/api/login 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Tue, 21 May 2024 00:54:24 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': 'W/"534-3NDOOzi5LyKG8BvqFnFla+vvddk"', 'Content-Encoding': 'gzip'} 
+ body={"msg":"Olá Qa-Coders-SYSADMIN, autenticação autorizada com sucesso!","user":{"_id":"6533099afa70d53075c81ef4","fullName":"Qa-Coders-SYSADMIN","mail":"sysadmin@qacoders.com","password":"$2b$10$ATGtQ.Y1PxkUq4rCKM3Kluv9xMRHPu82H8bZ7dSEISqLuPJR.LAn6","accessProfile":"SYSADMIN","cpf":"11111111111","status":true,"audit":[{"registeredBy":{"userId":"111111111111111111","userLogin":"sysadmin@qacoders.com"},"registrationDate":"sexta-feira, 20/10/2023, 20:13:29 BRT","registrationNumber":"01","companyId":"Qa.Coders","_id":"6533099afa70d53075c81ef5"}],"__v":0},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE"} 
+ </msg>
+<msg time="2024-05-20T21:54:28.228723" level="INFO">C:\Users\renil\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qualitys-hunters.qacoders-academy.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-05-20T21:54:28.230996" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<var>${resposta}</var>
+<arg>alias=APISwagger</arg>
+<arg>url=/api/login</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-05-20T21:54:27.905975" elapsed="0.325021"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-20T21:54:28.232005" level="INFO">{'msg': 'Olá Qa-Coders-SYSADMIN, autenticação autorizada com sucesso!', 'user': {'_id': '6533099afa70d53075c81ef4', 'fullName': 'Qa-Coders-SYSADMIN', 'mail': 'sysadmin@qacoders.com', 'password': '$2b$10$ATGtQ.Y1PxkUq4rCKM3Kluv9xMRHPu82H8bZ7dSEISqLuPJR.LAn6', 'accessProfile': 'SYSADMIN', 'cpf': '11111111111', 'status': True, 'audit': [{'registeredBy': {'userId': '111111111111111111', 'userLogin': 'sysadmin@qacoders.com'}, 'registrationDate': 'sexta-feira, 20/10/2023, 20:13:29 BRT', 'registrationNumber': '01', 'companyId': 'Qa.Coders', '_id': '6533099afa70d53075c81ef5'}], '__v': 0}, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE'}</msg>
+<arg>${resposta.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.230996" elapsed="0.001009"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-05-20T21:54:28.232005" level="INFO">${TOKEN} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5...</msg>
+<arg>${TOKEN}</arg>
+<arg>${resposta.json()["token"]}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.232005" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${TOKEN}</value>
+<status status="PASS" start="2024-05-20T21:54:28.233514" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-20T21:54:28.233514" level="INFO">${tokenadm} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5...</msg>
+<var>${tokenadm}</var>
+<status status="PASS" start="2024-05-20T21:54:27.901446" elapsed="0.332068"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-20T21:54:28.233514" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd...</msg>
+<var>${headers}</var>
+<arg>Authorization=Bearer ${TOKEN}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.233514" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-05-20T21:54:28.262224" level="INFO">GET Request : url=https://qualitys-hunters.qacoders-academy.com.br/api/validateToken 
+ path_url=/api/validateToken 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE'} 
+ body=None 
+ </msg>
+<msg time="2024-05-20T21:54:28.262732" level="INFO">GET Response : url=https://qualitys-hunters.qacoders-academy.com.br/api/validateToken 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Tue, 21 May 2024 00:54:24 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': 'W/"f-z+y5G3b6F1BDJ1A7U6QoI6VUcbI"'} 
+ body={"valid":false} 
+ </msg>
+<msg time="2024-05-20T21:54:28.262732" level="INFO">C:\Users\renil\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qualitys-hunters.qacoders-academy.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-05-20T21:54:28.263738" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<var>${resposta}</var>
+<arg>alias=APISwagger</arg>
+<arg>url=/api/validateToken</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.234522" elapsed="0.029216"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-20T21:54:28.264819" level="INFO">Resposta da solicitação: {"valid":false}</msg>
+<arg>Resposta da solicitação: ${resposta.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.263738" elapsed="0.001081"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-20T21:54:28.264819" level="INFO">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE</msg>
+<arg>${TOKEN}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.264819" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-20T21:54:27.900437" elapsed="0.365390"/>
+</kw>
+<kw name="Massa de dados diretoria" owner="diretoria_swagger_testes_recursos">
+<kw name="Generate Random String" owner="String">
+<msg time="2024-05-20T21:54:28.265827" level="INFO">${palavra_randomica_diretoria} = WAlWDvWU</msg>
+<var>${palavra_randomica_diretoria}</var>
+<arg>length=8</arg>
+<arg>chars=[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.265827" elapsed="0.001486"/>
+</kw>
+<kw name="Convert To Lower Case" owner="String">
+<msg time="2024-05-20T21:54:28.267313" level="INFO">${palavra_randomica_diretoria} = walwdvwu</msg>
+<var>${palavra_randomica_diretoria}</var>
+<arg>${palavra_randomica_diretoria}</arg>
+<doc>Converts string to lower case.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.267313" elapsed="0.000000"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-05-20T21:54:28.268703" level="INFO">${BOARD_NAME} = walwdvwu</msg>
+<arg>${BOARD_NAME}</arg>
+<arg>${palavra_randomica_diretoria}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.268194" elapsed="0.000509"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-20T21:54:28.269712" level="INFO">walwdvwu</msg>
+<arg>${BOARD_NAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.268703" elapsed="0.001009"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2024-05-20T21:54:28.269712" level="INFO">${palavra_randomica} = XUUWEWOO</msg>
+<var>${palavra_randomica}</var>
+<arg>length=8</arg>
+<arg>chars=[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.269712" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To Lower Case" owner="String">
+<msg time="2024-05-20T21:54:28.269712" level="INFO">${palavra_randomica} = xuuwewoo</msg>
+<var>${palavra_randomica}</var>
+<arg>${palavra_randomica}</arg>
+<doc>Converts string to lower case.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.269712" elapsed="0.001419"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-05-20T21:54:28.272142" level="INFO">${BOARD} = xuuwewoo&amp;</msg>
+<arg>${BOARD}</arg>
+<arg>${palavra_randomica}&amp;</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.271131" elapsed="0.001011"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-20T21:54:28.272142" level="INFO">xuuwewoo&amp;</msg>
+<arg>${BOARD}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.272142" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-20T21:54:28.265827" elapsed="0.006315"/>
+</kw>
+<kw name="incluir nova diretoria" owner="diretoria_swagger_testes_recursos">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-20T21:54:28.276106" level="INFO">${headers} = {'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6...</msg>
+<var>${headers}</var>
+<arg>authorization=${TOKEN}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.273652" elapsed="0.002454"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-20T21:54:28.277118" level="INFO">${body} = {'boardName': 'walwdvwu'}</msg>
+<var>${body}</var>
+<arg>boardName=${BOARD_NAME}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.277118" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-20T21:54:28.277118" level="INFO">{'boardName': 'walwdvwu'}</msg>
+<arg>${body}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.277118" elapsed="0.001000"/>
+</kw>
+<kw name="Criar sessão" owner="diretoria_swagger_testes_recursos">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-05-20T21:54:28.279118" level="INFO">${headers} = {'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWV...</msg>
+<var>${headers}</var>
+<arg>accept=application/json</arg>
+<arg>Content-Type=application/json</arg>
+<arg>authorization=${TOKEN}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-05-20T21:54:28.278118" elapsed="0.001000"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-05-20T21:54:28.279118" level="INFO">Creating Session using : alias=APISwagger, url=https://qualitys-hunters.qacoders-academy.com.br, headers={'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>alias=APISwagger</arg>
+<arg>url=https://qualitys-hunters.qacoders-academy.com.br</arg>
+<arg>headers=${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-05-20T21:54:28.279118" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-20T21:54:28.278118" elapsed="0.002070"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2024-05-20T21:54:28.705992" level="INFO">POST Request : url=https://qualitys-hunters.qacoders-academy.com.br/api/board/ 
+ path_url=/api/board/ 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE', 'Content-Length': '25'} 
+ body=b'{"boardName": "walwdvwu"}' 
+ </msg>
+<msg time="2024-05-20T21:54:28.707004" level="INFO">POST Response : url=https://qualitys-hunters.qacoders-academy.com.br/api/board/ 
+ status=201, reason=Created 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Tue, 21 May 2024 00:54:25 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '345', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': 'W/"159-dNQMgyZTyUar5158J4XNvqR6DTY"'} 
+ body={"msg":"Cadastro realizado com sucesso!","newBoard":{"boardName":"walwdvwu","boardCode":"308","status":true,"audit":[{"registrationDate":"segunda-feira, 20/05/2024, 21:54:25 BRT","registeredBy":{"userId":"6533099afa70d53075c81ef4","userLogin":"sysadmin@qacoders.com"},"_id":"664bf0c1b91aa60a4624cacf"}],"_id":"664bf0c1b91aa60a4624cace","__v":0}} 
+ </msg>
+<msg time="2024-05-20T21:54:28.707004" level="INFO">C:\Users\renil\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qualitys-hunters.qacoders-academy.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-05-20T21:54:28.709009" level="INFO">${resposta} = &lt;Response [201]&gt;</msg>
 <var>${resposta}</var>
 <arg>alias=APISwagger</arg>
 <arg>url=/api/board/</arg>
 <arg>json=${body}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.272395" elapsed="0.270437"/>
+<status status="PASS" start="2024-05-20T21:54:28.280188" elapsed="0.430205"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.542832" level="INFO">{'msg': 'Cadastro realizado com sucesso!', 'newBoard': {'boardName': 'tfwoscuj', 'boardCode': '302', 'status': True, 'audit': [{'registrationDate': 'domingo, 19/05/2024, 20:29:28 BRT', 'registeredBy': {'userId': '6533099afa70d53075c81ef4', 'userLogin': 'sysadmin@qacoders.com'}, '_id': '664a8b58b91aa60a4623815e'}], '_id': '664a8b58b91aa60a4623815d', '__v': 0}}</msg>
+<msg time="2024-05-20T21:54:28.711408" level="INFO">{'msg': 'Cadastro realizado com sucesso!', 'newBoard': {'boardName': 'walwdvwu', 'boardCode': '308', 'status': True, 'audit': [{'registrationDate': 'segunda-feira, 20/05/2024, 21:54:25 BRT', 'registeredBy': {'userId': '6533099afa70d53075c81ef4', 'userLogin': 'sysadmin@qacoders.com'}, '_id': '664bf0c1b91aa60a4624cacf'}], '_id': '664bf0c1b91aa60a4624cace', '__v': 0}}</msg>
 <arg>${resposta.json()}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.542832" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:28.710393" elapsed="0.001015"/>
 </kw>
 <kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.542832" level="INFO">${BOARD_NAME} = 664a8b58b91aa60a4623815d</msg>
+<msg time="2024-05-20T21:54:28.713068" level="INFO">${BOARD_NAME} = 664bf0c1b91aa60a4624cace</msg>
 <arg>${BOARD_NAME}</arg>
 <arg>${resposta.json()['newBoard']['_id']}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.542832" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:28.712406" elapsed="0.001170"/>
 </kw>
 <kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.542832" level="INFO">${RESPOSTA} = {'msg': 'Cadastro realizado com sucesso!', 'newBoard': {'boardName': 'tfwoscuj', 'boardCode': '302', 'status': True, 'audit': [{'registrationDate': 'domingo, 19/05/2024, 20:29:28 BRT', 'registeredBy':...</msg>
+<msg time="2024-05-20T21:54:28.714106" level="INFO">${RESPOSTA} = {'msg': 'Cadastro realizado com sucesso!', 'newBoard': {'boardName': 'walwdvwu', 'boardCode': '308', 'status': True, 'audit': [{'registrationDate': 'segunda-feira, 20/05/2024, 21:54:25 BRT', 'register...</msg>
 <arg>${RESPOSTA}</arg>
 <arg>${resposta.json()}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.542832" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:28.713576" elapsed="0.000530"/>
 </kw>
-<status status="PASS" start="2024-05-19T20:29:32.255707" elapsed="0.287125"/>
+<status status="PASS" start="2024-05-20T21:54:28.273652" elapsed="0.440454"/>
 </kw>
 <kw name="Validar campo obrigatório vazio a mensagem O campo boardName é obrigatório" owner="diretoria_swagger_testes_recursos">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.542832" level="INFO">${headers} = {'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6...</msg>
+<msg time="2024-05-20T21:54:28.716555" level="INFO">${headers} = {'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6...</msg>
 <var>${headers}</var>
 <arg>authorization=${TOKEN}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.542832" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:28.715544" elapsed="0.001011"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.542832" level="INFO">${body} = {'boardName': '""'}</msg>
+<msg time="2024-05-20T21:54:28.716555" level="INFO">${body} = {'boardName': '""'}</msg>
 <var>${body}</var>
 <arg>boardName=""</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.542832" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:28.716555" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${body}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.542832" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:28.717555" elapsed="0.000000"/>
 </kw>
 <kw name="Criar sessão" owner="diretoria_swagger_testes_recursos">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.542832" level="INFO">${headers} = {'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWV...</msg>
+<msg time="2024-05-20T21:54:28.718552" level="INFO">${headers} = {'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWV...</msg>
 <var>${headers}</var>
 <arg>accept=application/json</arg>
 <arg>Content-Type=application/json</arg>
 <arg>authorization=${TOKEN}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.542832" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:28.718552" elapsed="0.000000"/>
 </kw>
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-05-19T20:29:32.542832" level="INFO">Creating Session using : alias=APISwagger, url=https://qualitys-hunters.qacoders-academy.com.br, headers={'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjE1OTU1NSwiZXhwIjoxNzE2MjQ1OTU1fQ.Lhc9wgBb8tzYQcGL_Kd2KGm6l6DbOVutIVZLhiaK-_c'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-05-20T21:54:28.719990" level="INFO">Creating Session using : alias=APISwagger, url=https://qualitys-hunters.qacoders-academy.com.br, headers={'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>alias=APISwagger</arg>
 <arg>url=https://qualitys-hunters.qacoders-academy.com.br</arg>
 <arg>headers=${headers}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-05-19T20:29:32.542832" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:28.719990" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-05-19T20:29:32.542832" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:28.718552" elapsed="0.001438"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2024-05-19T20:29:32.743031" level="INFO">POST Request : url=https://qualitys-hunters.qacoders-academy.com.br/api/board 
+<msg time="2024-05-20T21:54:28.971232" level="INFO">POST Request : url=https://qualitys-hunters.qacoders-academy.com.br/api/board 
  path_url=/api/board 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjE1OTU1NSwiZXhwIjoxNzE2MjQ1OTU1fQ.Lhc9wgBb8tzYQcGL_Kd2KGm6l6DbOVutIVZLhiaK-_c', 'Content-Length': '21'} 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE', 'Content-Length': '21'} 
  body=b'{"boardName": "\\"\\""}' 
  </msg>
-<msg time="2024-05-19T20:29:32.743031" level="INFO">POST Response : url=https://qualitys-hunters.qacoders-academy.com.br/api/board 
+<msg time="2024-05-20T21:54:28.971232" level="INFO">POST Response : url=https://qualitys-hunters.qacoders-academy.com.br/api/board 
  status=400, reason=Bad Request 
- headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 23:29:28 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '84', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': 'W/"54-kPAkPq3704yBNDfw0n6YFGiWzyM"'} 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Tue, 21 May 2024 00:54:25 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '84', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': 'W/"54-kPAkPq3704yBNDfw0n6YFGiWzyM"'} 
  body={"error":["O campo 'diretoria' só pode conter letras e o caractere especial '&amp;'."]} 
  </msg>
-<msg time="2024-05-19T20:29:32.743031" level="INFO">C:\Users\renil\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qualitys-hunters.qacoders-academy.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2024-05-20T21:54:28.971232" level="INFO">C:\Users\renil\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qualitys-hunters.qacoders-academy.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2024-05-19T20:29:32.744799" level="INFO">${resposta} = &lt;Response [400]&gt;</msg>
+<msg time="2024-05-20T21:54:28.976782" level="INFO">${resposta} = &lt;Response [400]&gt;</msg>
 <var>${resposta}</var>
 <arg>alias=APISwagger</arg>
 <arg>url=/api/board</arg>
 <arg>json=${body}</arg>
 <arg>expected_status=400</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.542832" elapsed="0.201967"/>
+<status status="PASS" start="2024-05-20T21:54:28.719990" elapsed="0.256792"/>
 </kw>
-<status status="PASS" start="2024-05-19T20:29:32.542832" elapsed="0.201967"/>
+<status status="PASS" start="2024-05-20T21:54:28.715544" elapsed="0.261238"/>
 </kw>
 <kw name="validar campo preenchido com caracteres não permitidos &quot;O campo boardName só pode conter (descrição_caracteres)" owner="diretoria_swagger_testes_recursos">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.744799" level="INFO">${headers} = {'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6...</msg>
+<msg time="2024-05-20T21:54:28.978254" level="INFO">${headers} = {'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6...</msg>
 <var>${headers}</var>
 <arg>authorization=${TOKEN}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.744799" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:28.978254" elapsed="0.000000"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.744799" level="INFO">${body} = {'boardName': '"#"'}</msg>
+<msg time="2024-05-20T21:54:28.979266" level="INFO">${body} = {'boardName': '"#"'}</msg>
 <var>${body}</var>
 <arg>boardName="#"</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.744799" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:28.979266" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.744799" level="INFO">{'boardName': '"#"'}</msg>
+<msg time="2024-05-20T21:54:28.980266" level="INFO">{'boardName': '"#"'}</msg>
 <arg>${body}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.744799" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:28.980266" elapsed="0.000000"/>
 </kw>
 <kw name="Criar sessão" owner="diretoria_swagger_testes_recursos">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.748935" level="INFO">${headers} = {'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWV...</msg>
+<msg time="2024-05-20T21:54:28.982269" level="INFO">${headers} = {'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWV...</msg>
 <var>${headers}</var>
 <arg>accept=application/json</arg>
 <arg>Content-Type=application/json</arg>
 <arg>authorization=${TOKEN}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.748329" elapsed="0.000606"/>
+<status status="PASS" start="2024-05-20T21:54:28.981269" elapsed="0.001000"/>
 </kw>
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-05-19T20:29:32.749655" level="INFO">Creating Session using : alias=APISwagger, url=https://qualitys-hunters.qacoders-academy.com.br, headers={'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjE1OTU1NSwiZXhwIjoxNzE2MjQ1OTU1fQ.Lhc9wgBb8tzYQcGL_Kd2KGm6l6DbOVutIVZLhiaK-_c'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-05-20T21:54:28.982269" level="INFO">Creating Session using : alias=APISwagger, url=https://qualitys-hunters.qacoders-academy.com.br, headers={'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>alias=APISwagger</arg>
 <arg>url=https://qualitys-hunters.qacoders-academy.com.br</arg>
 <arg>headers=${headers}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-05-19T20:29:32.748935" elapsed="0.000720"/>
+<status status="PASS" start="2024-05-20T21:54:28.982269" elapsed="0.001613"/>
 </kw>
-<status status="PASS" start="2024-05-19T20:29:32.748329" elapsed="0.001326"/>
+<status status="PASS" start="2024-05-20T21:54:28.981269" elapsed="0.002613"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2024-05-19T20:29:32.827657" level="INFO">POST Request : url=https://qualitys-hunters.qacoders-academy.com.br/api/board/ 
+<msg time="2024-05-20T21:54:29.146042" level="INFO">POST Request : url=https://qualitys-hunters.qacoders-academy.com.br/api/board/ 
  path_url=/api/board/ 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjE1OTU1NSwiZXhwIjoxNzE2MjQ1OTU1fQ.Lhc9wgBb8tzYQcGL_Kd2KGm6l6DbOVutIVZLhiaK-_c', 'Content-Length': '22'} 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE', 'Content-Length': '22'} 
  body=b'{"boardName": "\\"#\\""}' 
  </msg>
-<msg time="2024-05-19T20:29:32.830192" level="INFO">POST Response : url=https://qualitys-hunters.qacoders-academy.com.br/api/board/ 
+<msg time="2024-05-20T21:54:29.147060" level="INFO">POST Response : url=https://qualitys-hunters.qacoders-academy.com.br/api/board/ 
  status=400, reason=Bad Request 
- headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 23:29:29 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '84', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': 'W/"54-kPAkPq3704yBNDfw0n6YFGiWzyM"'} 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Tue, 21 May 2024 00:54:25 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '84', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': 'W/"54-kPAkPq3704yBNDfw0n6YFGiWzyM"'} 
  body={"error":["O campo 'diretoria' só pode conter letras e o caractere especial '&amp;'."]} 
  </msg>
-<msg time="2024-05-19T20:29:32.830192" level="INFO">C:\Users\renil\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qualitys-hunters.qacoders-academy.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2024-05-20T21:54:29.147060" level="INFO">C:\Users\renil\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qualitys-hunters.qacoders-academy.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2024-05-19T20:29:32.830192" level="INFO">${resposta} = &lt;Response [400]&gt;</msg>
+<msg time="2024-05-20T21:54:29.148249" level="INFO">${resposta} = &lt;Response [400]&gt;</msg>
 <var>${resposta}</var>
 <arg>alias=APISwagger</arg>
 <arg>url=/api/board/</arg>
 <arg>json=${body}</arg>
 <arg>expected_status=400</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.750337" elapsed="0.079855"/>
+<status status="PASS" start="2024-05-20T21:54:28.983882" elapsed="0.164367"/>
 </kw>
-<status status="PASS" start="2024-05-19T20:29:32.744799" elapsed="0.085393"/>
+<status status="PASS" start="2024-05-20T21:54:28.976782" elapsed="0.171467"/>
 </kw>
 <kw name="deve permitir somente letras maiúsculas, minúsculas e o caractere especial &amp;" owner="diretoria_swagger_testes_recursos">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.832159" level="INFO">${headers} = {'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6...</msg>
+<msg time="2024-05-20T21:54:29.150258" level="INFO">${headers} = {'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6...</msg>
 <var>${headers}</var>
 <arg>authorization=${TOKEN}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.832159" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:29.150258" elapsed="0.000000"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.833761" level="INFO">${body} = {'boardName': 'bsolgqhq&amp;'}</msg>
+<msg time="2024-05-20T21:54:29.151260" level="INFO">${body} = {'boardName': 'xuuwewoo&amp;'}</msg>
 <var>${body}</var>
 <arg>boardName=${BOARD}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.832159" elapsed="0.001602"/>
+<status status="PASS" start="2024-05-20T21:54:29.151260" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.834282" level="INFO">{'boardName': 'bsolgqhq&amp;'}</msg>
+<msg time="2024-05-20T21:54:29.152259" level="INFO">{'boardName': 'xuuwewoo&amp;'}</msg>
 <arg>${body}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.834282" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:29.151260" elapsed="0.000999"/>
 </kw>
 <kw name="Criar sessão" owner="diretoria_swagger_testes_recursos">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.837210" level="INFO">${headers} = {'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWV...</msg>
+<msg time="2024-05-20T21:54:29.152259" level="INFO">${headers} = {'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWV...</msg>
 <var>${headers}</var>
 <arg>accept=application/json</arg>
 <arg>Content-Type=application/json</arg>
 <arg>authorization=${TOKEN}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.835971" elapsed="0.001239"/>
+<status status="PASS" start="2024-05-20T21:54:29.152259" elapsed="0.000000"/>
 </kw>
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-05-19T20:29:32.837210" level="INFO">Creating Session using : alias=APISwagger, url=https://qualitys-hunters.qacoders-academy.com.br, headers={'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjE1OTU1NSwiZXhwIjoxNzE2MjQ1OTU1fQ.Lhc9wgBb8tzYQcGL_Kd2KGm6l6DbOVutIVZLhiaK-_c'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-05-20T21:54:29.153768" level="INFO">Creating Session using : alias=APISwagger, url=https://qualitys-hunters.qacoders-academy.com.br, headers={'accept': 'application/json', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>alias=APISwagger</arg>
 <arg>url=https://qualitys-hunters.qacoders-academy.com.br</arg>
 <arg>headers=${headers}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-05-19T20:29:32.837210" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:29.153768" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-05-19T20:29:32.834851" elapsed="0.002359"/>
+<status status="PASS" start="2024-05-20T21:54:29.152259" elapsed="0.001509"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2024-05-19T20:29:32.957081" level="INFO">POST Request : url=https://qualitys-hunters.qacoders-academy.com.br/api/board/ 
+<msg time="2024-05-20T21:54:29.353769" level="INFO">POST Request : url=https://qualitys-hunters.qacoders-academy.com.br/api/board/ 
  path_url=/api/board/ 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjE1OTU1NSwiZXhwIjoxNzE2MjQ1OTU1fQ.Lhc9wgBb8tzYQcGL_Kd2KGm6l6DbOVutIVZLhiaK-_c', 'Content-Length': '26'} 
- body=b'{"boardName": "bsolgqhq&amp;"}' 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMzMDk5YWZhNzBkNTMwNzVjODFlZjQiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRBVEd0US5ZMVB4a1VxNHJDS00zS2x1djl4TVJIUHU4Mkg4Ylo3ZFNFSVNxTHVQSlIuTEFuNiIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDIwLzEwLzIwMjMsIDIwOjEzOjI5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjUzMzA5OWFmYTcwZDUzMDc1YzgxZWY1In1dLCJfX3YiOjAsImlhdCI6MTcxNjI1Mjg2NCwiZXhwIjoxNzE2MzM5MjY0fQ.UGLXiruYGm4tUZbHMSC2oAQA_MRpvdr5vC4ZXCerDIE', 'Content-Length': '26'} 
+ body=b'{"boardName": "xuuwewoo&amp;"}' 
  </msg>
-<msg time="2024-05-19T20:29:32.957081" level="INFO">POST Response : url=https://qualitys-hunters.qacoders-academy.com.br/api/board/ 
+<msg time="2024-05-20T21:54:29.353769" level="INFO">POST Response : url=https://qualitys-hunters.qacoders-academy.com.br/api/board/ 
  status=201, reason=Created 
- headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Sun, 19 May 2024 23:29:29 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '340', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': 'W/"154-wqv/ksO3HjdHXk9HtsRdiXo6Z3E"'} 
- body={"msg":"Cadastro realizado com sucesso!","newBoard":{"boardName":"bsolgqhq&amp;","boardCode":"303","status":true,"audit":[{"registrationDate":"domingo, 19/05/2024, 20:29:29 BRT","registeredBy":{"userId":"6533099afa70d53075c81ef4","userLogin":"sysadmin@qacoders.com"},"_id":"664a8b59b91aa60a46238163"}],"_id":"664a8b59b91aa60a46238162","__v":0}} 
+ headers={'Server': 'nginx/1.18.0 (Ubuntu)', 'Date': 'Tue, 21 May 2024 00:54:25 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '346', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization', 'ETag': 'W/"15a-uRcdzWS5PJMSw+gp84Sryq5rjmA"'} 
+ body={"msg":"Cadastro realizado com sucesso!","newBoard":{"boardName":"xuuwewoo&amp;","boardCode":"309","status":true,"audit":[{"registrationDate":"segunda-feira, 20/05/2024, 21:54:25 BRT","registeredBy":{"userId":"6533099afa70d53075c81ef4","userLogin":"sysadmin@qacoders.com"},"_id":"664bf0c1b91aa60a4624cad4"}],"_id":"664bf0c1b91aa60a4624cad3","__v":0}} 
  </msg>
-<msg time="2024-05-19T20:29:32.957081" level="INFO">C:\Users\renil\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qualitys-hunters.qacoders-academy.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2024-05-20T21:54:29.353769" level="INFO">C:\Users\renil\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qualitys-hunters.qacoders-academy.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2024-05-19T20:29:32.972685" level="INFO">${resposta} = &lt;Response [201]&gt;</msg>
+<msg time="2024-05-20T21:54:29.358949" level="INFO">${resposta} = &lt;Response [201]&gt;</msg>
 <var>${resposta}</var>
 <arg>alias=APISwagger</arg>
 <arg>url=/api/board/</arg>
 <arg>json=${body}</arg>
 <arg>expected_status=201</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.837210" elapsed="0.135475"/>
+<status status="PASS" start="2024-05-20T21:54:29.153768" elapsed="0.206177"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.972685" level="INFO">{'msg': 'Cadastro realizado com sucesso!', 'newBoard': {'boardName': 'bsolgqhq&amp;', 'boardCode': '303', 'status': True, 'audit': [{'registrationDate': 'domingo, 19/05/2024, 20:29:29 BRT', 'registeredBy': {'userId': '6533099afa70d53075c81ef4', 'userLogin': 'sysadmin@qacoders.com'}, '_id': '664a8b59b91aa60a46238163'}], '_id': '664a8b59b91aa60a46238162', '__v': 0}}</msg>
+<msg time="2024-05-20T21:54:29.360944" level="INFO">{'msg': 'Cadastro realizado com sucesso!', 'newBoard': {'boardName': 'xuuwewoo&amp;', 'boardCode': '309', 'status': True, 'audit': [{'registrationDate': 'segunda-feira, 20/05/2024, 21:54:25 BRT', 'registeredBy': {'userId': '6533099afa70d53075c81ef4', 'userLogin': 'sysadmin@qacoders.com'}, '_id': '664bf0c1b91aa60a4624cad4'}], '_id': '664bf0c1b91aa60a4624cad3', '__v': 0}}</msg>
 <arg>${resposta.json()}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.972685" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:29.359945" elapsed="0.000999"/>
 </kw>
 <kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.972685" level="INFO">${BOARD_NAME} = 664a8b59b91aa60a46238162</msg>
+<msg time="2024-05-20T21:54:29.362210" level="INFO">${BOARD_NAME} = 664bf0c1b91aa60a4624cad3</msg>
 <arg>${BOARD_NAME}</arg>
 <arg>${resposta.json()['newBoard']['_id']}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.972685" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:29.360944" elapsed="0.001266"/>
 </kw>
 <kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2024-05-19T20:29:32.972685" level="INFO">${RESPOSTA} = {'msg': 'Cadastro realizado com sucesso!', 'newBoard': {'boardName': 'bsolgqhq&amp;', 'boardCode': '303', 'status': True, 'audit': [{'registrationDate': 'domingo, 19/05/2024, 20:29:29 BRT', 'registeredBy'...</msg>
+<msg time="2024-05-20T21:54:29.362210" level="INFO">${RESPOSTA} = {'msg': 'Cadastro realizado com sucesso!', 'newBoard': {'boardName': 'xuuwewoo&amp;', 'boardCode': '309', 'status': True, 'audit': [{'registrationDate': 'segunda-feira, 20/05/2024, 21:54:25 BRT', 'registe...</msg>
 <arg>${RESPOSTA}</arg>
 <arg>${resposta.json()}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2024-05-19T20:29:32.972685" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-20T21:54:29.362210" elapsed="0.001509"/>
 </kw>
-<status status="PASS" start="2024-05-19T20:29:32.832159" elapsed="0.140526"/>
+<status status="PASS" start="2024-05-20T21:54:29.149259" elapsed="0.214460"/>
 </kw>
-<status status="PASS" start="2024-05-19T20:29:32.194757" elapsed="0.777928"/>
+<status status="PASS" start="2024-05-20T21:54:27.265075" elapsed="2.098644"/>
 </test>
-<status status="PASS" start="2024-05-19T20:29:32.042016" elapsed="0.948216"/>
+<status status="PASS" start="2024-05-20T21:54:26.911009" elapsed="2.453738"/>
 </suite>
 <statistics>
 <total>
